@@ -1,7 +1,46 @@
-# BeFit | fitNessMod
+# BeFit | fitNessMod | Beat Saber v0.12.x+ supported
 An IPA Plugin for BeatSaber to add a calorie counter/ tracker
 
+## v0.2.0 coming soon! 
+v0.1.x will continue to be updated until completed
+### Inaccuracies in current algorithm v0.1.0
+*Calorie Counts are nearly double what they should be. Next update will be using researched calorie counting methods called **METS**.*
+### New Algorithm Psuedo (Will change based on most efficient process):
+```float[] metsVals = new float[6];
+ bool[] enabledMetVals = {true};
+metsVals[0] = 3f; //Minimal Effort
+metsVals[1] = 4f; //Minimal to some effort
+metsVals[2] = 5f; //Trying Hard Difficulty up
+metsVals[3] = 6f; //Hard putting towards effort | Expert moderate effort
+metsVals[4] = 7f; //Expert putting towards effort | Expert+ moderate effort
+metsVals[5] = 8f; //Expert+ putting towards effort
+metsVals[6] = 9f; //Top of the leaderboard effort
+
+  
+
+if(Women){BMR = 655 + (9.6 x weight in kg) + (1.8 x height in cm) - (4.7 x age in years);}
+if(Men){BMR = 66 + (13.7 x weight in kg) + (5 x height in cm) - (6.8 x age in years);}
+difficulty = based on changes on movement considering both hands and headset relative to BMR
+
+caloriesBurnedLast90FixedUpdates = ((metVals[difficulty] * 3.5f * weightInKiloGrams)/200)/60);
+  
+```
+
+### What to expect with the new update?
+**The plugin will ask for you to enter your:**
+- [ ] weight *choose between metric or lbs*
+- [ ] height *Height can be toggled off to use in-game height measurement. As of right now, not sure which will perform better*
+- [ ] Age
+- [ ] Gender
+
+Expect new calorie counts to be around half of what they are now. 
+The legacy counting algorithm will still be included and be able to be switch on in the new menu.
+
+
+
 **Calorie counts may be *higher* or *lower* than what the users actually doing.**
+
+*All calorie counting software/ devices are estimates and do not accurately represents calories burned!*
 
 ## Current Features
 1.  [x] Count Song Calories    - Displays calories adding up as you play beat saber songs
@@ -13,7 +52,7 @@ An IPA Plugin for BeatSaber to add a calorie counter/ tracker
 ## Future Improvments
 Things to add:
 * [ ] Calories based on vertical movment of headset
-* [ ] Larger distance between blocks has higher coefficient.
+* [ ] ~~Larger distance between blocks has higher coefficient.~~
 * [ ] A seperate menu composed of:
   * [ ] Toggle individual labels visible on menu screen
   * [ ] Setting daily Calorie goals
