@@ -67,6 +67,6 @@ METS values are currently determined by the velocity at 5 different intensities.
 
 
 ### Feedback
-Find me on the [Beat Saber Modding Community Discord](https://discordapp.com/invite/beatsabermods) or DM me directly, @Viscoci
+Find me on the [Beat Saber Modding Community Discord](https://discordapp.com/invite/beatsabermods) or DM me directly, @Viscoci#9683
   
 
